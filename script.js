@@ -1,6 +1,9 @@
 $(document).ready(function() {
-
-
-    $("#first_name").errorBlur();
+    $("#name").nameValidate({
+        pattern: /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłóńśźż]*$/
+    });
     $("#email").emailValidate();
+    $("#password").passwordValidate({
+      value: 11
+    });
 });
